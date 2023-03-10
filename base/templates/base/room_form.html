@@ -1,0 +1,11 @@
+{{ extends 'main.html' }}
+
+{{ content block }}
+
+<div class="container">
+  <form method = 'POST' action="">{% csrf_token %}
+    <input type='submit' value='Save'/>
+  </form>
+</div>
+
+{{ endblock }}

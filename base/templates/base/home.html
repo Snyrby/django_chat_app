@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<p>Home</p>
+
+<div class="container">
+    <div class="row">
+        {% for room in rooms %}
+        <div class="column">
+            <span> @{{ room.hosts.username }} </span>
+<!--            this is how you would dynamically map urls if the url if you change in the url file-->
+            <h5>{{room.id}} -- <a href="{% url 'rooms' room.id %}">{{room.name}}</a></h5>
+            <small>{{room.topic.name}}</small>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
