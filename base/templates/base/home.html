@@ -3,6 +3,8 @@
 {% block content %}
 <p>Home</p>
 
+<a href="{% url 'create-room' %}"> Create Room </a>
+
 <div class="container">
     <div class="row">
         {% for room in rooms %}
