@@ -3,17 +3,12 @@ K
 base/migrations/__init__.py,1\8\18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59
 <
 base/apps.py,5\d\5d45bbbb4003eb4d41fbfa753b7f83374fb9b0f7
-:
-
-db.sqlite3,9\0\907ac5e500f6286c18519bf943721af4c97e50d5
 =
 base/admin.py,9\7\975371957ebd8f6a90ec2d9cb4acbde7726d3523
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 E
 templates/navbar.html,2\1\2152ecc432cb8e2a5acad94785c9a8c5a8df8cac
-]
--.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 O
 base/migrations/0001_initial.py,8\2\82460a45716821801990985028639803940cdbaa
 m
@@ -34,12 +29,6 @@ K
 base/urls.py,1\d\1d5c58c9ce97bebb17761793282b0e3a9226391d
 G
 django_chat_app/urls.py,8\7\87673dfa8d509a1b0148e42ed77689085f3d2e2c
->
-base/models.py,7\9\79190922dd98f80068a283410b513a280e5c3b30
-=
-base/forms.py,c\b\cbe5b477b2f4c441a89b4abfd35a9cc06bd2349c
-=
-base/views.py,1\a\1a6e5c9e4b3932c9102d5deff09dedd83e406b08
 N
 base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
 R

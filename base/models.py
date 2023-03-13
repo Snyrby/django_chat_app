@@ -20,6 +20,9 @@ class Room(models.Model):
     # auto_now is the method used to create the time on update every time
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        ordering = ['-updated_at', '-created_at']
+
     # create a string representation of the room
     def __str__(self):
         return self.name
