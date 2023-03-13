@@ -3,6 +3,10 @@
 import os
 import sys
 
+# create home page
+# crud
+# search bar
+# create with user authentication
 
 def main():
     """Run administrative tasks."""

@@ -7,8 +7,6 @@ K
 base/admin.py,9\7\975371957ebd8f6a90ec2d9cb4acbde7726d3523
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-E
-templates/navbar.html,2\1\2152ecc432cb8e2a5acad94785c9a8c5a8df8cac
 O
 base/migrations/0001_initial.py,8\2\82460a45716821801990985028639803940cdbaa
 m
@@ -19,17 +17,5 @@ Y
 Q.idea/sonarlint/securityhotspotstore/1/8/18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59,6\4\64166c2d4e08c32149b121741368077d55f5d316
 w
 G.idea/sonarlint/issuestore/1/8/18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59,1\6\16e2051fdb7fa2915964b0ffe2cb4c8b0b01cd39
-M
-base/templates/base/home.html,6\3\63779bb9d39c2e49d9d96d6ffa000d7051970b17
-C
-templates/main.html,7\0\70463c664bcf38fa5d46b8f3fd74b75dac46c512
 K
 django_chat_app/settings.py,a\3\a38c6eef27aa0d6a0785ee0001781826ca57c1c1
-<
-base/urls.py,1\d\1d5c58c9ce97bebb17761793282b0e3a9226391d
-G
-django_chat_app/urls.py,8\7\87673dfa8d509a1b0148e42ed77689085f3d2e2c
-N
-base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
-R
-"base/templates/base/room_form.html,3\b\3b12389eb576334b98b56c1bb2c0fd28c51e2af6
