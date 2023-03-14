@@ -7,6 +7,11 @@ import sys
 # crud
 # search bar
 # create with user authentication
+# restrict pages if user is not logged in
+# hide content if user is not logged in like edit page if it's not theirs
+# prevent user from manually going to login page if they're logged in to prevent multiple login attempts.
+# create registration page
+# allow user to commend on pages
 
 def main():
     """Run administrative tasks."""

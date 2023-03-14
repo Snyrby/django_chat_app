@@ -3,16 +3,27 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .forms import RoomForm
-from .models import Room, Topic
+from .models import Room, Topic, Message
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
 app_name = 'base'
 # don't name this login because it is a builtin function
-def loginPage(request):
+
+
+# both in login and register it passes in the page. If the page is login, then it will show the login form
+# if the page is register, then it will show the register form
+def login_page(request):
+    page = 'login'
+    if request.user.is_authenticated:
+        return redirect('home')
+
     if request.method == 'POST':
-        username = request.POST.get('username')
+        username = request.POST.get('username').lower()
         password = request.POST.get('password')
         try:
             user = User.objects.get(username=username)
@@ -22,8 +33,34 @@ def loginPage(request):
         if user is not None:
             login(request, user)
             return redirect('home')
-    context = {}
+        else:
+            messages.error(request, 'Username or Password does not exist')
+    context = {'page': page}
     return render(request, 'base/login_register.html', context)
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('home')
+
+
+def register_page(request):
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            # this will save the form but freeze it in time
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.error(request, 'An error occurred during registration')
+    return render(request, 'base/login_register.html', {'form': form,})
+
+
 def home_view(request, *args, **kwargs): # *args, **kwargs
     # This is how to search for something in the database with a search bar etc.
     q = request.GET.get('q') if request.GET.get('q') != None else ''
@@ -43,9 +80,16 @@ def room_view(request, pk):
     # .get will retrieve a single object
     # .filter will filter by particular field
     # .exclude will do the opposite of filter
-    context = {'room': room}
+    # messgaes = parent. child _set.all() - infront of created_at means descending order
+    room_messages = room.message_set.all().order_by('-created_at')
+    if request.method == 'POST':
+        new_message = Message.objects.create(room=room, sender=request.user, text=request.POST.)
+
+
+    context = {'room': room, 'room_messages': room_messages}
     return render(request, 'base/rooms.html', context)
 
+@login_required(login_url='login')
 def create_room_view(request):
     form = RoomForm()
     if request.method == 'POST':
@@ -57,9 +101,15 @@ def create_room_view(request):
     context = {'form': form}
     return render(request, 'base/room_form.html', context)
 
+@login_required(login_url='login')
 def update_room_view(request, pk):
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)
+
+    # this validates if the user can edit a room or not. Even if knowing the url
+    if request.user != room.hosts:
+        return HttpResponse('You are not allowed to edit this room')
+
     if request.method == 'POST':
         form = RoomForm(request.POST, instance=room)
         if form.is_valid():
@@ -69,8 +119,11 @@ def update_room_view(request, pk):
     context = {'form': form}
     return render(request, 'base/room_form.html', context)
 
+@login_required(login_url='login')
 def delete_room_view(request, pk):
     room = Room.objects.get(id=pk)
+    if request.user != room.hosts:
+        return HttpResponse('You are not allowed to edit this room')
     if request.method == 'POST':
         room.delete()
         return redirect('home')
