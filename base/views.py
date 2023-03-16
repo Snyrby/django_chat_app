@@ -83,7 +83,12 @@ def room_view(request, pk):
     # messgaes = parent. child _set.all() - infront of created_at means descending order
     room_messages = room.message_set.all().order_by('-created_at')
     if request.method == 'POST':
-        new_message = Message.objects.create(room=room, sender=request.user, text=request.POST.)
+        new_message = Message.objects.create(
+            user=request.user,
+            Room=room,
+            body=request.POST.get('body')
+        )
+        return redirect('rooms', pk=room.id)
 
 
     context = {'room': room, 'room_messages': room_messages}

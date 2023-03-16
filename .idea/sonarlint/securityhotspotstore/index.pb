@@ -19,3 +19,15 @@ Y
 Q.idea/sonarlint/securityhotspotstore/1/8/18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59,6\4\64166c2d4e08c32149b121741368077d55f5d316
 w
 G.idea/sonarlint/issuestore/1/8/18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59,1\6\16e2051fdb7fa2915964b0ffe2cb4c8b0b01cd39
+C
+templates/main.html,7\0\70463c664bcf38fa5d46b8f3fd74b75dac46c512
+M
+base/templates/base/home.html,6\3\63779bb9d39c2e49d9d96d6ffa000d7051970b17
+<
+base/urls.py,1\d\1d5c58c9ce97bebb17761793282b0e3a9226391d
+W
+'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
+E
+templates/navbar.html,2\1\2152ecc432cb8e2a5acad94785c9a8c5a8df8cac
+9
+	manage.py,3\1\3156ad13e4d695cd526bbb7b031016ecba842270

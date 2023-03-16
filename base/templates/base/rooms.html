@@ -2,30 +2,45 @@
 
 {% block content %}
 
-<h1>{{room.name}}</h1>
-<p>{{room.description}}</p>
+<style>
+    .room-container{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+</style>
 
-<div class="comment-wrapper">
-    <h3>Conversation</h3>
-    <hr>
-    {% for message in room_messages %}
-    <div>
-<!--        | pipe is used to filter the value-->
-        <small>@{{message.user}}  {{message.created_at|timesince}} ago</small>
-        <p>{{message.body}}</p>
-        <hr>
+<div class="room-container">
+    <div class="room">
+        <h1>{{room.name}}</h1>
+        <p>{{room.description}}</p>
+
+        <div class="comment-wrapper">
+            <h3>Conversation</h3>
+            <hr>
+            {% for message in room_messages %}
+            <div>
+        <!--        | pipe is used to filter the value-->
+                <small>@{{message.user}}  {{message.created_at|timesince}} ago</small>
+                <p>{{message.body}}</p>
+                <hr>
+            </div>
+
+            {% endfor %}
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <div class="comment-form">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" name="body" placeholder="Write your message here..."/>
+            </form>
+        </div>
+        {% endif %}
     </div>
+    <div class="participant-container">
+        <h3>Participants</h3>
 
-    {% endfor %}
+    </div>
 </div>
-
-{% if request.user.is_authenticated %}
-<div class="comment-form">
-    <form method="POST" action="">
-        {% csrf_token %}
-        <input type="text" name="body" placeholder="Write your message here..."/>
-    </form>
-</div>
-{% endif %}
 
 {% endblock content %}
