@@ -82,6 +82,7 @@ def room_view(request, pk):
     # .exclude will do the opposite of filter
     # messgaes = parent. child _set.all() - infront of created_at means descending order
     room_messages = room.message_set.all().order_by('-created_at')
+    participants = room.participants.all()
     if request.method == 'POST':
         new_message = Message.objects.create(
             user=request.user,
@@ -91,7 +92,7 @@ def room_view(request, pk):
         return redirect('rooms', pk=room.id)
 
 
-    context = {'room': room, 'room_messages': room_messages}
+    context = {'room': room, 'room_messages': room_messages, 'participants': participants}
     return render(request, 'base/rooms.html', context)
 
 @login_required(login_url='login')
