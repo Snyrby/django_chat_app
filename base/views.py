@@ -71,7 +71,9 @@ def home_view(request, *args, **kwargs): # *args, **kwargs
     )
     room_count = rooms.count()
     topics = Topic.objects.all()
-    context = {'rooms': rooms, 'topics': topics, 'room_count': room_count}
+    # you could change this to show only people you follow etc.
+    room_messages = Message.objects.all().filter(Q(Room__topic__name__icontains=q))
+    context = {'rooms': rooms, 'topics': topics, 'room_count': room_count, 'room_messages': room_messages}
     return render(request, 'base/home.html', context)
 
 
@@ -81,7 +83,7 @@ def room_view(request, pk):
     # .filter will filter by particular field
     # .exclude will do the opposite of filter
     # messgaes = parent. child _set.all() - infront of created_at means descending order
-    room_messages = room.message_set.all().order_by('-created_at')
+    room_messages = room.message_set.all()
     participants = room.participants.all()
     if request.method == 'POST':
         new_message = Message.objects.create(
@@ -95,6 +97,11 @@ def room_view(request, pk):
 
     context = {'room': room, 'room_messages': room_messages, 'participants': participants}
     return render(request, 'base/rooms.html', context)
+
+def user_profile(request, pk):
+    user = User.objects.get(id=pk)
+    context = {'user': user}
+    return render(request, 'base/profile.html', context)
 
 @login_required(login_url='login')
 def create_room_view(request):
