@@ -89,6 +89,7 @@ def room_view(request, pk):
             Room=room,
             body=request.POST.get('body')
         )
+        room.participants.add(request.user)
         return redirect('rooms', pk=room.id)
 
 
@@ -106,6 +107,7 @@ def create_room_view(request):
 
     context = {'form': form}
     return render(request, 'base/room_form.html', context)
+
 
 @login_required(login_url='login')
 def update_room_view(request, pk):
@@ -125,6 +127,7 @@ def update_room_view(request, pk):
     context = {'form': form}
     return render(request, 'base/room_form.html', context)
 
+
 @login_required(login_url='login')
 def delete_room_view(request, pk):
     room = Room.objects.get(id=pk)
@@ -134,3 +137,14 @@ def delete_room_view(request, pk):
         room.delete()
         return redirect('home')
     return render(request, 'base/delete.html', {'obj': room})
+
+
+@login_required(login_url='login')
+def delete_message(request, pk):
+    message = Message.objects.get(id=pk)
+    if request.user != message.user:
+        return HttpResponse('You are not allowed to edit this message')
+    if request.method == 'POST':
+        message.delete()
+        return redirect('home')
+    return render(request, 'base/delete.html', {'obj': message})
