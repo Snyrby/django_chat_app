@@ -100,7 +100,11 @@ def room_view(request, pk):
 
 def user_profile(request, pk):
     user = User.objects.get(id=pk)
-    context = {'user': user}
+    # gets all the children values when using 'model name' _set then all
+    rooms = user.room_set.all()
+    room_messages = user.message_set.all()
+    topics = Topic.objects.all()
+    context = {'user': user, 'rooms': rooms, 'topics': topics, 'room_messages': room_messages}
     return render(request, 'base/profile.html', context)
 
 @login_required(login_url='login')
@@ -109,7 +113,9 @@ def create_room_view(request):
     if request.method == 'POST':
         form = RoomForm(request.POST)
         if form.is_valid():
-            form.save()
+            room = form.save(commit=False)
+            room.hosts = request.user
+            room.save()
             return redirect('home')
 
     context = {'form': form}

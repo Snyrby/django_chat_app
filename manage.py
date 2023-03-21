@@ -12,6 +12,9 @@ import sys
 # prevent user from manually going to login page if they're logged in to prevent multiple login attempts.
 # create registration page
 # allow user to commend on pages
+# user profile page
+# link everything together
+# static files on settings page
 
 def main():
     """Run administrative tasks."""
