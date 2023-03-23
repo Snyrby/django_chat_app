@@ -23,10 +23,6 @@ W
 'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
 O
 base/templates/base/delete.html,f\2\f29238d07fe843c786a84e8b40d28706451f2580
-N
-base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
-X
-(base/templates/base/topic_component.html,a\2\a29f5691cbc942f2253dfb7a311833a40d492cdf
 P
  base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
 [
