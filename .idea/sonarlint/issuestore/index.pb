@@ -21,7 +21,13 @@ R
 "base/templates/base/room_form.html,3\b\3b12389eb576334b98b56c1bb2c0fd28c51e2af6
 W
 'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
-E
-templates/navbar.html,2\1\2152ecc432cb8e2a5acad94785c9a8c5a8df8cac
 O
 base/templates/base/delete.html,f\2\f29238d07fe843c786a84e8b40d28706451f2580
+N
+base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
+X
+(base/templates/base/topic_component.html,a\2\a29f5691cbc942f2253dfb7a311833a40d492cdf
+P
+ base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
+[
++base/templates/base/activity_component.html,2\a\2a1bf5367127b9d5922dd7abeb6b1352620f37b5

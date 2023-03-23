@@ -15,6 +15,11 @@ import sys
 # user profile page
 # link everything together
 # static files on settings page
+# install theme
+# transfer files
+# load static files for css
+# transfer code into main and home page
+# extend main page
 
 def main():
     """Run administrative tasks."""
