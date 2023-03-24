@@ -69,8 +69,8 @@ def home_view(request, *args, **kwargs): # *args, **kwargs
         Q(name__icontains=q) |
         Q(description__icontains=q)
     )
+    topics = Topic.objects.all()[0:5]
     room_count = rooms.count()
-    topics = Topic.objects.all()
     # you could change this to show only people you follow etc.
     room_messages = Message.objects.all().filter(Q(Room__topic__name__icontains=q))
     context = {'rooms': rooms, 'topics': topics, 'room_count': room_count, 'room_messages': room_messages}
@@ -187,3 +187,8 @@ def update_user(request):
     context = {'form': form}
     return render(request, 'base/update_user.html', context)
 
+def topics_page(request):
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    topics = Topic.objects.filter(name__icontains=q)
+    context = {'topics': topics}
+    return render(request, 'base/topics.html', context)
