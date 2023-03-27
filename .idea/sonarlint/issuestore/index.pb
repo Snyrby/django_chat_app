@@ -19,8 +19,6 @@ w
 G.idea/sonarlint/issuestore/1/8/18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59,1\6\16e2051fdb7fa2915964b0ffe2cb4c8b0b01cd39
 F
 static/styles/main.css,8\4\840d61cc6547984840ba53233bb59f29c063f8c5
-9
-	manage.py,3\1\3156ad13e4d695cd526bbb7b031016ecba842270
 T
 $base/templates/base/profile_old.html,e\f\ef59251a45e2a3e9d67f3655093e6a51db3659a9
 W
@@ -40,8 +38,6 @@ $base/templates/base/update_user.html,d\1\d173dde9c19b8e45c889560712524ebab12d2
 base/forms.py,c\b\cbe5b477b2f4c441a89b4abfd35a9cc06bd2349c
 P
  base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
-C
-templates/main.html,7\0\70463c664bcf38fa5d46b8f3fd74b75dac46c512
 S
 #base/templates/base/delete_old.html,9\1\917c16940d4dc19869deb3acd647db82f63d929f
 O
@@ -52,5 +48,3 @@ W
 'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
 [
 +base/templates/base/login_register_old.html,7\0\7067c70f887e6e6b3269b9178a780cfb4f0567ad
-O
-base/templates/base/topics.html,f\3\f302a59131969467773a4a13314b8724743418c7

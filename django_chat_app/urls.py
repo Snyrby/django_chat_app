@@ -20,4 +20,5 @@ from base.views import home_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base.urls')),
+    path('api/', include('base.api.urls')),
 ]

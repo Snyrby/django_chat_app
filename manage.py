@@ -20,6 +20,12 @@ import sys
 # load static files for css
 # transfer code into main and home page
 # extend main page
+# create api folder for REST API
+# start in views file
+# now do the URLS file
+# add django rest framework with pip install
+# do serialization
+# install cors headers library
 
 def main():
     """Run administrative tasks."""
