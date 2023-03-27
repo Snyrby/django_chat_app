@@ -3,8 +3,6 @@ K
 base/migrations/__init__.py,1\8\18a9d7f7ee96ec8b3816dd378e4fd8b5f64dbc59
 <
 base/apps.py,5\d\5d45bbbb4003eb4d41fbfa753b7f83374fb9b0f7
-=
-base/admin.py,9\7\975371957ebd8f6a90ec2d9cb4acbde7726d3523
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 O
@@ -21,8 +19,6 @@ F
 static/styles/main.css,8\4\840d61cc6547984840ba53233bb59f29c063f8c5
 T
 $base/templates/base/profile_old.html,e\f\ef59251a45e2a3e9d67f3655093e6a51db3659a9
-W
-'base/templates/base/feed_component.html,b\9\b90a2adb0c52e7a2d17f5ea0e8a296421f81ed5a
 V
 &base/templates/base/room_form_old.html,5\2\52e1d478b2e4c944bfc9f41ca9fb1964765d6963
 R
@@ -36,8 +32,6 @@ P
  base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
 T
 $base/templates/base/update_user.html,d\1\d173dde9c19b8e45c889560712524ebab12d239e
-=
-base/forms.py,c\b\cbe5b477b2f4c441a89b4abfd35a9cc06bd2349c
 O
 base/templates/base/delete.html,f\2\f29238d07fe843c786a84e8b40d28706451f2580
 S

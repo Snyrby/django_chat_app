@@ -3,6 +3,7 @@
 import os
 import sys
 
+# set to email only login
 # create home page
 # crud
 # search bar
@@ -26,6 +27,7 @@ import sys
 # add django rest framework with pip install
 # do serialization
 # install cors headers library
+# media root
 
 def main():
     """Run administrative tasks."""
