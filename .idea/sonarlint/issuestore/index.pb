@@ -21,14 +21,10 @@ F
 static/styles/main.css,8\4\840d61cc6547984840ba53233bb59f29c063f8c5
 9
 	manage.py,3\1\3156ad13e4d695cd526bbb7b031016ecba842270
-Q
-!base/templates/base/home_old.html,4\8\483f6971ca2db625d6949622c7ab8a39ce9b3dca
 T
 $base/templates/base/profile_old.html,e\f\ef59251a45e2a3e9d67f3655093e6a51db3659a9
 W
 'base/templates/base/feed_component.html,b\9\b90a2adb0c52e7a2d17f5ea0e8a296421f81ed5a
-[
-+base/templates/base/activity_component.html,2\a\2a1bf5367127b9d5922dd7abeb6b1352620f37b5
 R
 "base/templates/base/rooms_old.html,e\1\e15fa4436192211769006718adc0fae3aa1e2ba5
 :
@@ -44,10 +40,6 @@ $base/templates/base/update_user.html,d\1\d173dde9c19b8e45c889560712524ebab12d2
 base/forms.py,c\b\cbe5b477b2f4c441a89b4abfd35a9cc06bd2349c
 P
  base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
-N
-base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
->
-base/models.py,7\9\79190922dd98f80068a283410b513a280e5c3b30
 C
 templates/main.html,7\0\70463c664bcf38fa5d46b8f3fd74b75dac46c512
 S
@@ -60,13 +52,5 @@ W
 'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
 [
 +base/templates/base/login_register_old.html,7\0\7067c70f887e6e6b3269b9178a780cfb4f0567ad
-<
-base/urls.py,1\d\1d5c58c9ce97bebb17761793282b0e3a9226391d
 O
 base/templates/base/topics.html,f\3\f302a59131969467773a4a13314b8724743418c7
-=
-base/views.py,1\a\1a6e5c9e4b3932c9102d5deff09dedd83e406b08
-M
-base/templates/base/home.html,6\3\63779bb9d39c2e49d9d96d6ffa000d7051970b17
-X
-(base/templates/base/topic_component.html,a\2\a29f5691cbc942f2253dfb7a311833a40d492cdf
