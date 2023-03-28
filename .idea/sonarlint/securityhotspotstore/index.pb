@@ -30,20 +30,12 @@ S
 #base/templates/base/delete_old.html,9\1\917c16940d4dc19869deb3acd647db82f63d929f
 [
 +base/templates/base/login_register_old.html,7\0\7067c70f887e6e6b3269b9178a780cfb4f0567ad
-W
-'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
 M
 base/templates/base/home.html,6\3\63779bb9d39c2e49d9d96d6ffa000d7051970b17
 <
 base/urls.py,1\d\1d5c58c9ce97bebb17761793282b0e3a9226391d
 Q
 !base/templates/base/activity.html,e\2\e28beb620c7910511db02ba3c02ca7b23920ac32
->
-base/models.py,7\9\79190922dd98f80068a283410b513a280e5c3b30
-W
-'base/templates/base/feed_component.html,b\9\b90a2adb0c52e7a2d17f5ea0e8a296421f81ed5a
-N
-base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
 A
 base/api/views.py,3\8\38af0bf06216986fdf1745571bbd90fb19f459a2
 @
@@ -56,13 +48,21 @@ E
 templates/navbar.html,2\1\2152ecc432cb8e2a5acad94785c9a8c5a8df8cac
 C
 templates/main.html,7\0\70463c664bcf38fa5d46b8f3fd74b75dac46c512
-[
-+base/templates/base/activity_component.html,2\a\2a1bf5367127b9d5922dd7abeb6b1352620f37b5
 T
 $base/templates/base/update_user.html,d\1\d173dde9c19b8e45c889560712524ebab12d239e
-P
- base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
 =
 base/forms.py,c\b\cbe5b477b2f4c441a89b4abfd35a9cc06bd2349c
+>
+base/models.py,7\9\79190922dd98f80068a283410b513a280e5c3b30
+W
+'base/templates/base/feed_component.html,b\9\b90a2adb0c52e7a2d17f5ea0e8a296421f81ed5a
+N
+base/templates/base/rooms.html,f\1\f1191e1bf15deb2b9e7f85143aaad721392cb8bc
+P
+ base/templates/base/profile.html,b\5\b58af22ec0b3f8ba0a5797828f765a63ff816804
+[
++base/templates/base/activity_component.html,2\a\2a1bf5367127b9d5922dd7abeb6b1352620f37b5
+W
+'base/templates/base/login_register.html,a\7\a745a327930cdf495b806a0f2c788c960434df9f
 =
 base/views.py,1\a\1a6e5c9e4b3932c9102d5deff09dedd83e406b08
