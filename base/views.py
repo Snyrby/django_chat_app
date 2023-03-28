@@ -1,13 +1,12 @@
 from django.shortcuts import render, redirect
 from django.db.models import Q
-# from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .forms import RoomForm, UserForm
+from .forms import RoomForm, UserForm, MyUserCreationForm
 from .models import Room, Topic, Message, User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+
 
 # Create your views here.
 
@@ -45,10 +44,10 @@ def logout_user(request):
 
 
 def register_page(request):
-    form = UserCreationForm()
+    form = MyUserCreationForm()
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = MyUserCreationForm(request.POST)
         if form.is_valid():
             # this will save the form but freeze it in time
             user = form.save(commit=False)
@@ -180,7 +179,7 @@ def update_user(request):
     user = request.user
     form = UserForm(instance=user)
     if request.method == 'POST':
-        form = UserForm(request.POST, instance=user)
+        form = UserForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
             form.save()
             return redirect('user-profile', pk=user.id)
